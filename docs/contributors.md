@@ -30,7 +30,16 @@ Not everyone on the team is on Twitter, but here's a [Twitter list](https://twit
   </div>
 END OF BLANK BIO TEMPLATE -->
 
+<table>
+  <tr>
+     <td align="center"><a href="https://twitter.com/analyticlaw"><img src="./assets/contributors/agin.jpg" width="100px;" alt=""/><br /><sub><b>Warrin Agin</b></sub></a><br /><a href="#warren-agin" title="Answering Questions">💬</a> Lawyer who plays with data. Practide bankruptcy, coperate and internet law for 28 yeras. Now managing director for Elevate Services' Digital Strategy & Solutions group. </td>
+  </tr>
+</table>
+
+
 #### Warren Agin
+
+
 
 ![Agin Profile Pic](./assets/contributors/agin.jpg)
 
