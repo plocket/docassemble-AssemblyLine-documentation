@@ -12,155 +12,81 @@ slug: /contributors
 Not everyone on the team is on Twitter, but here's a [Twitter list](https://twitter.com/i/lists/1246069325880012800?s=20) made up of team members. New folks are joining the team every day, and though we try to keep this list up-to-date, like this entire project, it is ever changing.
 
 
-<!-- START OF BLANK BIO TEMPLATE
-  <div class="listing" style="float:left;border-top: solid 1px #ccc;padding:0 15px 15px 15px;width:100%">
-    <a name="lastname" href="doc-assembly-line/#lastname" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper">
-      <div class="profile_pic" style="background-image: url('doc-assembly-line/images/lastname.jpg');background-size:200px;background-position: 0px 0px;"></div>
-    </div>
-    <p class="profile_title">
-      <b>firstname Lastname</b>, Title
-    </p>
-    <p>Text of bio.</p>
-    <p style="text-align:right;">
-      <a href="">Personal Website</a> |
-      <a href="">Twitter</a> |
-      <a href="">LinkedIn</a>
-    </p>
-  </div>
-END OF BLANK BIO TEMPLATE -->
+export const Contrib = ({children, name, pic, page_id, socials}) => (
+  <tr id={page_id}>
+    <td>
+      <img src={pic} alt={ name + " Profile Picture"}/>
+      <br/> <sub><b><a href={"#" + page_id}>{name}</a></b></sub>
+    </td>
+    <td>{children}</td>
+    <td>
+      <ul>
+        {
+          (socials) ? (socials.map((social, i) => {
+            return <li key={i}><a href={social[0]}>{social[1]}</a></li>
+          })) : null 
+        }
+      </ul>
+    </td>
+  </tr>
+);
 
 <table>
-  <tr>
-     <td align="center"><a href="https://twitter.com/analyticlaw"><img src="./assets/contributors/agin.jpg" width="100px;" alt=""/><br /><sub><b>Warrin Agin</b></sub></a><br /><a href="#warren-agin" title="Answering Questions">💬</a> Lawyer who plays with data. Practide bankruptcy, coperate and internet law for 28 yeras. Now managing director for Elevate Services' Digital Strategy & Solutions group. </td>
-  </tr>
+  <tbody>
+    <Contrib name="Warren Agin" pic="/img/contributors/agin.jpg" page_id="warren-agin"
+        socials={[["https://twitter.com/analyticlaw", "Twitter"], ["https://www.linkedin.com/in/warren-e-agin-a50b0/", "LinkedIn"]]}>
+      Lawyer who plays with data. Practiced bankruptcy, corporate and internet law for 28 years. Now managing director for Elevate Services' Digital Strategy & Solutions group
+    </Contrib>
+    <Contrib name="Kate Barry, The Assembly Line 209A Czar" pic="/img/contributors/robby.jpg" page_id="kate_barry">
+      The DocAssemble Line 209A Czar! Staff attorney in the family law unit at Greater Boston Legal Services.
+    </Contrib>
+    <Contrib name="Mia Bonardi" pic="/img/contributors/bonardi.jpg" page_id="bonardi"
+      socials={[["https://www.linkedin.com/in/miabonardi/", "LinkedIn"]]}>
+      Mia Bonardi is a 3L at Suffolk University Law School.
+    </Contrib>
+    <Contrib name="Matthew Brooks" pic="/img/contributors/brooks.jpg" page_id="brooks"
+      socials={[["https://www.linkedin.com/in/matthew-brooks-he-him-ab944315/", "LinkedIn"]]}>
+      Matt Brooks is a staff attorney at <a href="https://www.gbls.org/">Greater Boston Legal Services</a> who focuses on consumer debt issues. He is also an occasional docassemble developer, a former Equal Justice Works Fellow, and a former law clerk for the Bankruptcy Court for the Northern District of Texas. He once rode <a href="https://en.wikipedia.org/wiki/Coney_Island_Cyclone">The Cyclone</a> rollercoaster in Coney Island 135 times in a row to raise an embarrassingly small amount of money for charity. The experience haunts him to this day.
+    </Contrib>
+    <Contrib name="Chandler Burnham" pic="/img/contributors/burnham.jpg" 
+      page_id="burnham" socials={[["https://www.linkedin.com/in/chandler-burnham/", "LinkedIn"]]}>
+      Chandler is a Massachusetts native currently attending Boston University School of Law. Prior to law school, he worked for a Boston based tech company after studying biology at University of Massachusetts Amherst.
+    </Contrib>
+    <Contrib name="Esme Caramello" pic="/img/contributors/robby.jpg" page_id="caramello"
+      socials={[["https://hls.harvard.edu/faculty/directory/10132/Caramello", "University Listing"]]}>
+      <p>Faculty Director at the Harvard Legal Aid Bureau, Member of the Access to Justice Commission and its COVID-19 Task Force</p>
+    </Contrib>
+    <Contrib name="Jack Castor" pic="/img/contributors/castor.jpg" page_id="castor"
+      socials={[["https://www.linkedin.com/in/jcastor/", "LinkedIn"]]}>
+      <p>Jack Castor is a rising 2L at Suffolk University Law School. Jack is amazing at playing Tetris and has even surpassed Steve Wozniak's infamous high score. Everyone is impressed with his Tetris skills.</p>
+    </Contrib>
+    <Contrib name="David Colarusso, Director of the Legal Innovation and Technology Lab, Practitioner-in-Residence" pic="/img/contributors/colarusso_1.jpg" page_id="colarusso"
+      socials={[["http://www.davidcolarusso.com/", "Personal Website"], ["https://twitter.com/Colarusso", "Twitter"], ["https://www.linkedin.com/in/colarusso/", "LinkedIn"], ["https://osf.io/fya6w/", "LawArXiv"]]}>
+    <p>David Colarusso is the Director of Suffolk University Law School's Legal Innovation and Technology Lab. An attorney and educator by training, he has worked as a public defender, data scientist, software engineer, and high school physics teacher. 
+       He is the author of a programming language for lawyers, <a href="http://www.qnamarkup.org/">QnA Markup</a>, an award winning <a href="http://www.lawtechnologytoday.org/2014/08/aba-first-hackathon-how-a-public-defender-built-due-processr/">legal hacker</a>, 
+       <a href="http://www.abajournal.com/legalrebels/article/david_colarusso_profile">ABA Legal Rebel</a>, and <a href="http://www.fastcase.com/fastcase50/?class=2016">Fastcase 50 honoree</a>. In 2017 he was named one of the ABA's <a href="http://www.abajournal.com/magazine/article/best_law_twitter_web_100">top legal tweeters</a>.</p>
+    </Contrib>
+    <Contrib name="Michael Cronin" pic="/img/contributors/cronin.jpg" page_id="cronin"
+      socials={[["https://www.linkedin.com/in/michael-cronin-384608116", "LinkedIn"]]}>
+      <p>Michael is a 2021 J.D. Candidate at Suffolk University Law School. He is the President of the Real Estate and Trusts and Estates student association at Suffolk and graduated from Wheaton College in 2016 where he was a 4 year varsity soccer athlete and Philosophy Major.</p>
+    </Contrib>
+    <Contrib name="Jodi Cantrell" pic="/img/contributors/cantrell.jpg" page_id="cantrell"
+      socials={[["https://www.linkedin.com/in/jodi-cantrell/", "LinkedIn"]]}>
+      <p>Jodi is a 4L at Suffolk University Law School in Boston and has more than 20 years of IT experience.  As a former IT Director with Thermo Fisher Scientific, Jodi lead the North American Employee Experience group consisting of the Desktop and Site Support teams, as well as leading the Global IT Service Desk. She also held various project management roles within the IT Organization and played a key role in leading system integrations following Thermo Fisher's acquisition of Life Technologies in 2014.  Prior to joining Thermo Fisher in 2011, Jodi spent 10 years in various IT leadership functions with America West Airlines and US Airways.  Jodi completed her Bachelor's degree in Broadcast Journalism from Arizona State University..</p>
+    </Contrib>
+    <Contrib name="Charlotte Damico" pic="/img/contributors/damico.jpg" page_id="damico"
+      socials={[["https://www.linkedin.com/in/charlottedamico/", "LinkedIn"]]}>
+      Charlotte is a 3L at Drexel Law School in Philadelphia, PA.
+    </Contrib>
+    <Contrib name="Rose Devlin" pic="/img/contributors/devlin.jpg" page_id="devlin"
+      socials={[["https://www.linkedin.com/in/rosedevlin/", "LinkedIn"]]}>
+      <p>Rose is the lead UX/UI designer at Theory and Principle, a legal technology product design and development firm based in Portland, Maine. She has been a designer for 12 years, starting her career as a graphic designer in San Francisco and then moving on to user experience design in 2013. Rose has designed products ranging from large eCommerce sites, to health care products, to applications in the justice space. She is skilled at Sketch and InVision prototyping, moodboards and typography, illustration, and user flows. She has a BFA in Communications Design from Syracuse University’s School of Visual and Performing Arts and is a regular contributor to local User Experience Professional Association chapters.</p>
+    </Contrib>
+  </tbody>
 </table>
 
 
-#### Warren Agin
-
-
-
-![Agin Profile Pic](./assets/contributors/agin.jpg)
-
-Lawyer who plays with data. Practiced bankruptcy, corporate and internet law for 28 years. Now managing director for Elevate Services' Digital Strategy & Solutions group.
-* [Twitter](https://twitter.com/analyticlaw)
-* [LinkedIn](https://www.linkedin.com/in/warren-e-agin-a50b0/)
-
-
-#### Kate Barry
-The DocAssembly Line 209A Czar
-
-![Kate Barry Profile Pic](./assets/contributors/robby.jpg)
-
-Staff attorney in the family law unit at Greater Boston Legal Services.
-
 <!--
-
-    <a name="bonardi" href="doc-assembly-line/#bonardi" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('doc-assembly-line/images/bonardi.jpg');background-size:200px;background-position: 0px 0px;"></div></div>
-    <p class="profile_title">
-			<b>Mia Bonardi</b></p>
-    <p>Mia Bonardi is a 2L at Suffolk University Law School.</p>
-    <p style="text-align:right;">
-      <a href="https://www.linkedin.com/in/miabonardi/" target="_blank">LinkedIn</a>
-    </p>
-
-
-    <a name="brooks" href="doc-assembly-line/#brooks" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('doc-assembly-line/images/brooks.jpg');background-size:200px;background-position: 0px 0px;"></div></div>
-    <p class="profile_title">
-			<b>Matthew Brooks</b>, DocAssembly Line Project Manager Emeritus</p>
-    <p>Matt Brooks is a staff attorney at <a href="https://www.gbls.org/">Greater Boston Legal Services</a> who focuses on consumer debt issues. He is also an occasional docassemble developer, a former Equal Justice Works Fellow, and a former law clerk for the Bankruptcy Court for the Northern District of Texas. He once rode <a href="https://en.wikipedia.org/wiki/Coney_Island_Cyclone">The Cyclone</a> rollercoaster in Coney Island 135 times in a row to raise an embarrassingly small amount of money for charity. The experience haunts him to this day.</p>
-    <p style="text-align:right;">
-      <a href="https://www.linkedin.com/in/matthew-brooks-he-him-ab944315/" target="_blank">LinkedIn</a>
-    </p>
-
-
-    <a name="burnham" href="doc-assembly-line/#burnham" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('https://media-exp1.licdn.com/dms/image/C4D03AQFTsYezm8rnbg/profile-displayphoto-shrink_200_200/0?e=1596067200&v=beta&t=wc673zbH_WIw6uyVPIf6tF5Dz4lpgmAj7cv9kNgDngo');background-size:230px;background-position: -20px 0px;"></div></div>
-    <p class="profile_title">
-			<b>Chandler Burnham</b></p>
-    <p>Chandler is a Massachusetts native currently attending Boston University School of Law. Prior to law school, he worked for a Boston based tech company after studying biology at University of Massachusetts Amherst.</p>
-    <p style="text-align:right;">
-      <a href="https://www.linkedin.com/in/chandler-burnham/" target="_blank">LinkedIn</a>
-    </p>
-
-
-    <a name="caramello" href="doc-assembly-line/#caramello" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('images/robby.jpg');background-size:230px;background-position: -20px 0px;"></div></div>
-    <p class="profile_title">
-			<b>Esme Caramello</b></p>
-    <p>Faculty Director at the Harvard Legal Aid Bureau, Member of the Access to Justice Commission and its COVID-19 Task Force</p>
-    <p style="text-align:right;">
-      <a href="https://hls.harvard.edu/faculty/directory/10132/Caramello" target="_blank">University Listing</a>
-    </p>
-
-  <a name="castor" href="doc-assembly-line/#castor" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('https://raw.githubusercontent.com/SuffolkLITLab/doc-assembly-line/master/images/castor.jpg');background-size:200px;background-position: 0px 0px;"></div></div>
-    <p class="profile_title">
-			<b>Jack Castor</b></p>
-    <p>Jack Castor is a rising 2L at Suffolk University Law School. Jack is amazing at playing Tetris and has even surpassed Steve Wozniak's infamous high score. Everyone is impressed with his Tetris skills.</p>
-    <p style="text-align:right;">
-      <a href="https://www.linkedin.com/in/jcastor/" target="_blank">LinkedIn</a>
-    </p>
-
-    <a name="colarusso" href="doc-assembly-line/#colarusso" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('../images/colarusso_1.jpg');background-position: -45px center;"></div></div>
-    <p class="profile_title">
-			<b>David Colarusso</b>, Director of the Legal Innovation and Technology Lab, Practitioner-in-Residence</p>
-    <p>David Colarusso is the Director of Suffolk University Law School's Legal Innovation and Technology Lab. An attorney and educator by training, he has worked as a public defender, data scientist, software engineer, and high school physics teacher. He is the author of a programming language for lawyers, <a href="http://www.qnamarkup.org/">QnA Markup</a>, an award winning <a href="http://www.lawtechnologytoday.org/2014/08/aba-first-hackathon-how-a-public-defender-built-due-processr/">legal hacker</a>, <a href="http://www.abajournal.com/legalrebels/article/david_colarusso_profile">ABA Legal Rebel</a>, and <a href="http://www.fastcase.com/fastcase50/?class=2016">Fastcase 50 honoree</a>. In 2017 he was named one of the ABA's <a href="http://www.abajournal.com/magazine/article/best_law_twitter_
-	    _100">top legal tweeters</a>.</p>
-    <p style="text-align:right;">
-      <a href="http://www.davidcolarusso.com/" target="_blank">Personal Website</a> |
-      <a href="https://twitter.com/Colarusso" target="_blank">Twitter</a> |
-      <a href="https://www.linkedin.com/in/colarusso/" target="_blank">LinkedIn</a> |
-      <a href="https://osf.io/fya6w/" target="_blank">LawArXiv</a>
-    </p>
-
-
-    <a name="cronin" href="doc-assembly-line/#cronin" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper">
-	    <div class="profile_pic" style="background-image: url('https://raw.githubusercontent.com/SuffolkLITLab/doc-assembly-line/master/images/cronin.jpg');background-size:200px;background-position: 0px 0px;"></div></div>
-    <p class="profile_title">
-			<b>Michael Cronin</b></p>
-    <p>Michael is a 2021 J.D. Candidate at Suffolk University Law School. He is the President of the Real Estate and Trusts and Estates student association at Suffolk and graduated from Wheaton College in 2016 where he was a 4 year varsity soccer athlete and Philosophy Major.</p>
-    <p style="text-align:right;">
-      <a href="https://www.linkedin.com/in/michael-cronin-384608116" target="_blank">LinkedIn</a>
-    </p>
-
-  
-    <a name="cantrell" href="doc-assembly-line/#cantrell" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper">
-      <div class="profile_pic" style="background-image: url('doc-assembly-line/images/cantrell.jpg');background-size:200px;background-position: 0px 0px;"></div>
-    </div>
-    <p class="profile_title">
-      <b>Jodi Cantrell</b>, Title
-    </p>
-    <p>Jodi is a 4L at Suffolk University Law School in Boston and has more than 20 years of IT experience.  As a former IT Director with Thermo Fisher Scientific, Jodi lead the North American Employee Experience group consisting of the Desktop and Site Support teams, as well as leading the Global IT Service Desk. She also held various project management roles within the IT Organization and played a key role in leading system integrations following Thermo Fisher's acquisition of Life Technologies in 2014.  Prior to joining Thermo Fisher in 2011, Jodi spent 10 years in various IT leadership functions with America West Airlines and US Airways.  Jodi completed her Bachelor's degree in Broadcast Journalism from Arizona State University..</p>
-    <p style="text-align:right;">
-      <a href="https://www.linkedin.com/in/jodi-cantrell/">LinkedIn</a>
-    </p>
-
-
-    <a name="damico" href="doc-assembly-line/#damico" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('doc-assembly-line/images/damico.jpg');background-size:200px;background-position: 0px 0px;"></div></div>
-    <p class="profile_title">
-			<b>Charlotte Damico</b></p>
-    <p>I am a 3L at Drexel Law School in Philadelphia, PA. Looking forward to helping out!</p>
-    <p style="text-align:right;">
-      <a href="https://www.linkedin.com/in/charlottedamico/" target="_blank">LinkedIn</a>
-    </p>
-
-
-    <a name="devlin" href="doc-assembly-line/#devlin" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
-    <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('doc-assembly-line/images/devlin.jpg');background-size:200px;background-position: 0px 0px;"></div></div>
-    <p class="profile_title">
-			<b>Rose Devlin</b></p>
-    <p>Rose is the lead UX/UI designer at Theory and Principle, a legal technology product design and development firm based in Portland, Maine. She has been a designer for 12 years, starting her career as a graphic designer in San Francisco and then moving on to user experience design in 2013. Rose has designed products ranging from large eCommerce sites, to health care products, to applications in the justice space. She is skilled at Sketch and InVision prototyping, moodboards and typography, illustration, and user flows. She has a BFA in Communications Design from Syracuse University’s School of Visual and Performing Arts and is a regular contributor to local User Experience Professional Association chapters.</p>
-    <p style="text-align:right;">
-      <a href="https://www.linkedin.com/in/rosedevlin/" target="_blank">LinkedIn</a>
-    </p>
 
     <a name="duncan" href="doc-assembly-line/#duncan" class="anchor" alt="deep link to this section" style="margin-top:15px;"></a>
     <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('doc-assembly-line/images/duncan.jpg');background-size:200px;background-position: 0px 0px;"></div></div>
