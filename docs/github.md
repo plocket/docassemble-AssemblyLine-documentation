@@ -5,6 +5,7 @@ sidebar_label: Github tutorials
 slug: /github
 ---
 <!-- original: https://docs.google.com/document/d/1pj1DFIhzzwB6raeCytnmPSR41WfNvG-T9GYPsf1wOsA/edit -->
+<!-- Test deploy/test_deploy workflows -->
 
 Ways to use GitHub in combination with docassemble. GitHub itself has decent documentation for its own features.
 
