@@ -1,11 +1,11 @@
 ---
 id: intro
-title: The Document Assembly Line
+title: Such a Cool Line
 sidebar_label: About
 slug: /
 ---
 
-The Document Assembly Line project will help you produce **[beautiful web apps](https://courtformsonline.org)** 
+The Awesome People project will help you produce **[beautiful web apps](https://courtformsonline.org)** 
 that help users complete legal forms more quickly.
 
 Go straight from a PDF or DOCX file to a runnable prototype in less than an hour. Build out from
