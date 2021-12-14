@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Such a Cool Line
+title: A Much Cooler Line
 sidebar_label: About
 slug: /
 ---
