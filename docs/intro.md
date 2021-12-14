@@ -1,6 +1,6 @@
 ---
 id: intro
-title: A Much Cooler Line
+title: Public repo
 sidebar_label: About
 slug: /
 ---
