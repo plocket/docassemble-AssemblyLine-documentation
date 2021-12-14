@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Public repo
+title: Just gh token
 sidebar_label: About
 slug: /
 ---
